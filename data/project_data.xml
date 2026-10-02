@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project_service>
+  <users>
+    <user type="Manager">
+      <id>1</id>
+      <username>ivanov</username>
+      <email>ivanov@corp.ru</email>
+      <role>manager</role>
+    </user>
+    <user type="Developer">
+      <id>2</id>
+      <username>petrov</username>
+      <email>petrov@corp.ru</email>
+      <role>developer</role>
+    </user>
+    <user type="Developer">
+      <id>3</id>
+      <username>sidorova</username>
+      <email>sidorova@corp.ru</email>
+      <role>developer</role>
+    </user>
+  </users>
+  <teams>
+    <team>
+      <id>1</id>
+      <name>Backend</name>
+      <members>
+        <member>ivanov</member>
+        <member>petrov</member>
+        <member>sidorova</member>
+      </members>
+    </team>
+  </teams>
+  <projects>
+    <project>
+      <id>1</id>
+      <name>Интернет-магазин</name>
+      <description>Новый маркетплейс</description>
+      <team>Backend</team>
+      <sprints>
+        <sprint>
+          <id>1</id>
+          <name>Sprint #1</name>
+          <start_date>2024-10-01</start_date>
+          <end_date>2024-10-14</end_date>
+          <tasks>
+            <task type="feature">
+              <id>1</id>
+              <title>Корзина покупателя</title>
+              <status>review</status>
+              <priority>high</priority>
+              <assignee>petrov</assignee>
+            </task>
+            <task type="feature">
+              <id>2</id>
+              <title>Личный кабинет</title>
+              <status>new</status>
+              <priority>medium</priority>
+            </task>
+            <task type="bug">
+              <id>3</id>
+              <title>Падение при пустом поиске</title>
+              <status>done</status>
+              <priority>critical</priority>
+              <assignee>sidorova</assignee>
+            </task>
+          </tasks>
+        </sprint>
+      </sprints>
+    </project>
+  </projects>
+</project_service>

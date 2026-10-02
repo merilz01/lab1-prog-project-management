@@ -1,0 +1,172 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "type": "Manager",
+            "username": "ivanov",
+            "email": "ivanov@corp.ru",
+            "role": {
+                "name": "manager",
+                "permissions": [
+                    "read",
+                    "write",
+                    "assign_task"
+                ]
+            },
+            "managed_projects": []
+        },
+        {
+            "id": 2,
+            "type": "Developer",
+            "username": "petrov",
+            "email": "petrov@corp.ru",
+            "role": {
+                "name": "developer",
+                "permissions": [
+                    "read",
+                    "write"
+                ]
+            },
+            "skills": [
+                "Python",
+                "Django"
+            ],
+            "assigned_tasks": [
+                1
+            ]
+        },
+        {
+            "id": 3,
+            "type": "Developer",
+            "username": "sidorova",
+            "email": "sidorova@corp.ru",
+            "role": {
+                "name": "developer",
+                "permissions": [
+                    "read",
+                    "write"
+                ]
+            },
+            "skills": [
+                "JS",
+                "React"
+            ],
+            "assigned_tasks": [
+                3
+            ]
+        }
+    ],
+    "teams": [
+        {
+            "id": 1,
+            "name": "Backend",
+            "members": [
+                "ivanov",
+                "petrov",
+                "sidorova"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "name": "Интернет-магазин",
+            "description": "Новый маркетплейс",
+            "team": "Backend",
+            "sprints": [
+                {
+                    "id": 1,
+                    "name": "Sprint #1",
+                    "start_date": "2024-10-01",
+                    "end_date": "2024-10-14",
+                    "tasks": [
+                        {
+                            "id": 1,
+                            "type": "feature",
+                            "title": "Корзина покупателя",
+                            "description": "Добавление и удаление товаров",
+                            "status": "review",
+                            "priority": "high",
+                            "assignee": "petrov",
+                            "tags": [
+                                "frontend",
+                                "ux"
+                            ],
+                            "comments": [
+                                {
+                                    "id": 1,
+                                    "author": "ivanov",
+                                    "text": "Заменить иконку корзины",
+                                    "created_at": "2026-10-02T22:32:50.625480"
+                                },
+                                {
+                                    "id": 2,
+                                    "author": "petrov",
+                                    "text": "Готово, залил в ветку feature/cart",
+                                    "created_at": "2026-10-02T22:32:50.625485"
+                                }
+                            ],
+                            "time_logs": [
+                                {
+                                    "id": 1,
+                                    "user": "petrov",
+                                    "hours": 4.5,
+                                    "date": "2026-10-02",
+                                    "note": "Вёрстка корзины"
+                                },
+                                {
+                                    "id": 2,
+                                    "user": "petrov",
+                                    "hours": 2.0,
+                                    "date": "2026-10-02",
+                                    "note": "Правки по UX"
+                                }
+                            ],
+                            "total_hours": 6.5,
+                            "acceptance_criteria": "Товар добавляется и удаляется",
+                            "story_points": 5
+                        },
+                        {
+                            "id": 2,
+                            "type": "feature",
+                            "title": "Личный кабинет",
+                            "description": "",
+                            "status": "new",
+                            "priority": "medium",
+                            "assignee": null,
+                            "tags": [],
+                            "comments": [],
+                            "time_logs": [],
+                            "total_hours": 0,
+                            "acceptance_criteria": "",
+                            "story_points": 3
+                        },
+                        {
+                            "id": 3,
+                            "type": "bug",
+                            "title": "Падение при пустом поиске",
+                            "description": "",
+                            "status": "done",
+                            "priority": "critical",
+                            "assignee": "sidorova",
+                            "tags": [],
+                            "comments": [],
+                            "time_logs": [
+                                {
+                                    "id": 3,
+                                    "user": "sidorova",
+                                    "hours": 1.5,
+                                    "date": "2026-10-02",
+                                    "note": ""
+                                }
+                            ],
+                            "total_hours": 1.5,
+                            "severity": "blocker",
+                            "steps_to_reproduce": "Открыть поиск → Enter"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
